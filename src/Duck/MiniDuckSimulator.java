@@ -6,5 +6,14 @@ public class MiniDuckSimulator {
         mallard.PerformFly();
         mallard.PerformQuack();
         mallard.Display();
+
+        System.out.println("----------");
+
+        Duck model = new ModelDuck();
+        model.PerformFly();
+        model.PerformQuack();
+        model.SetFlyBehavior(new FlyRocketPowered());
+        model.PerformFly();
+        model.Display();
     }
 }
